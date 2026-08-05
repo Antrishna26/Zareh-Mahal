@@ -11,6 +11,10 @@ body{
     width: 100%;
     min-height: 100vh;
     background-color: #0b0b0b;
+    background-image: url(pictures/biriyanibg2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 .navbar{
     display:flex;
@@ -19,6 +23,10 @@ body{
     padding: 25px 80px;
     position: sticky;
     top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(8px);
 
     background: rgba(0, 0, 0, 0.2);
     backdrop-filter: blur (10px);
@@ -70,6 +78,7 @@ body{
 .hero-image img{
     width: 90%;
     max-width: 550px;
+    border-radius: 20px;
 }
 .tagline{
     color: #d4af37;

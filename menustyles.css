@@ -1,0 +1,162 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #111111;
+    color: white;
+    font-family: Georgia, serif;
+}
+.menu-logo img{
+    margin-left: 200px;
+    width:300px;
+}
+.menuheader h3{
+    font-size: 30px;
+    color: #d4af37;
+    margin: 0;
+}
+.menuheader h1{
+    font-size: 50px;
+    color: #d4af37;
+    margin: 0;
+}
+.menuheader p{
+    font-size: 20px;
+    color: #d4af37;
+    margin-top: 8px;
+}
+.menu{
+    display:flex;
+    align-items: center;
+    text-align: center;
+    gap: 100px;
+}
+.menunavbar{
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: space-between;
+    flex: 1;
+    font-size: 20px;
+    padding-bottom: 30px;
+}
+.menunavbar a{
+    text-decoration: none;
+    color: #de9c0d;
+    flex: 1;
+    padding: 0 40px;
+    background: transparent;
+    backdrop-filter: blur(8px);
+    position: sticky;
+}
+.card-container{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+.card{
+    width:300px;
+    background:#1b1b1b;
+    border-radius:20px;
+    padding:20px;
+
+    display:flex;
+    flex-direction:column;
+    transition: all 0.1s ease-in;
+    cursor: pointer;
+}
+.card img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 55px;
+
+    transition: transform .5s ease;
+}
+.card:hover{
+    transform: translateY(-12px) scale(1.03);
+    box-shadow: 0 18px 40px rgba(91, 76, 21, 0.35);
+    border: 1px solid #8a6e11;
+}
+.card:hover img{
+    transform: scale(1.08);
+}
+.signature-dishes, .appetizers1, .main-course, .biriyani, .Breads, .rices, .misti, .bevarage {
+    width:100%;
+    padding: 20px;
+}
+.signature-dishes h2, .appetizers1 h2, .main-course h2, .biriyani h2, .Breads h2, .rices h2, .misti h2, .bevarage h2{
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 10px;
+    color: #d4af37;
+    letter-spacing: 2px;
+}
+.card h2{      
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    color: #d4af37;
+    font-size: 20px;
+    margin-bottom: 20px;
+
+    transition: color .4s ease, text-shadow .4s ease;
+}
+.card:hover h2{
+    color: #ffd95c;
+    text-shadow: 0 0 15px rgba(212,175,55,.7);
+}
+.card h3{
+    margin-top: 20px;
+    font-size: 20px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    transition: color .4s ease;
+}
+.card:hover{
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 20px 45px rgba(212,175,55,.35);
+    border: 1px solid rgba(212,175,55,.6);
+    background: linear-gradient(180deg,#222222, #1a1a1a
+    );
+}
+.card p{
+    margin-top: 5px;
+    font-size: 18px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.badge{
+    display:inline-block;
+    background:linear-gradient(135deg,#f4d35e,#c89b2c);
+    color:#111;
+    font-size:12px;
+    font-weight:bold;
+    padding:7px 14px;
+    border-radius:20px;
+    letter-spacing:1px;
+    margin-bottom:15px;
+    text-transform:uppercase;
+    box-shadow:0 3px 10px rgba(212,175,55,.35);
+    text-align: center;
+
+    transition: all .4s ease;
+}
+.card:hover .badge{
+    transform: scale(1.08);
+    box-shadow: 0 0 20px rgba(212,175,55,.7);
+}
+

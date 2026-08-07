@@ -20,16 +20,12 @@ body{
     display:flex;
     justify-content: space-between;
     align-items: center;
-    padding: 25px 80px;
     position: sticky;
     top: 0;
     left: 0;
     width: 100%;
     background: rgba(0, 0, 0, 0.2);
-    backdrop-filter: blur(8px);
-
-    background: rgba(0, 0, 0, 0.2);
-    backdrop-filter: blur (10px);
+    backdrop-filter: blur(10px);
 }
 .logo{
     display: flex;
@@ -38,7 +34,7 @@ body{
     gap: 5px;
 }
 .logo img{
-    width: 200px;
+    width: 350px;
 }
 .logo h1{
     font size: 30px;
@@ -49,16 +45,22 @@ body{
 .nav-links{
     display: flex;
     list-style: none;
-    gap: 30px;
-    margin: 30px;
+    gap: 35px;
+    font-size: 20px;
 }
 .nav-links a{
     text-decoration: none;
     color: aliceblue;
 }
 .reserve{
+    padding: 12px 25px;
+    border:2px solid #d4af37;
+    background: transparent;
     margin-left: 30px;
     text-decoration: none;
+    cursor: pointer;
+    color: #d4af37;
+    border-radius: 40px;
 }
 .hero-container{
     display:flex;
@@ -68,6 +70,7 @@ body{
 }
 .hero-content{
     flex: 1;
+    padding-top: 80px;
 }
 .hero-image{
     flex: 1;
@@ -84,18 +87,6 @@ body{
     color: #d4af37;
     font-size:15px ;
     letter-spacing: 2px;
-}
-.hero-content h2{
-    font-size: 60px;
-    margin: 20px,0;
-    line-height: 1.2;
-}
-.hero-content p{
-    font-size: 18px;
-    line-height: 1.8;
-    color: #cfcfcf;
-    margin-bottom: 30px;
-
 }
 .btn1,.btn2{
     padding: 25px;

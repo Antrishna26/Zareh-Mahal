@@ -8,68 +8,336 @@
         <link rel="stylesheet" href="styles.css">
     </head>
     <body>
-        <header class="hero">
+        <header class="header-part">
+            <nav class="navbar">
 
-                <nav class="navbar">
-
-                    <div class="logo">
-                        <img src="pictures/zareh mahal logo.png" alt="'zareh mahal logo">
-                    </div>
-
-                    <ul class="nav-links">
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="menu.html">Menu</a></li>
-                        <li><a href="#chef">Chef</a></li>
-                        <li><a href="#gallery">Gallery</a></li>
-                        <li><a href="#reservation">Reservation</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-
-                    <a href="#reservation" class="reserve-btn"><button class="reserve" >Reserve a Table</button></a>
-                </nav>
-
-                <!-- hero -->
-
-                <div class="hero-container">
-
-                    <div class="hero-content">
-
-                        <span class="tagline">
-                            AUTHENTIC MUGHLAI ROYAL HOSPITALITY
-                        </span>
-
-                        <h1>
-                            WHERE ROYAL HERITAGE <br>
-                            MEETS TIMELESS FLAVOURS
-                        </h1>
-
-                        <p>
-                            Experience the richness of authentic Mughlai cuisine,
-                            crafted with royal recipes, aromatic spices, and timeless traditions
-                            for an unforgettable dining experience.
-                        </p>
-
-                        <div class="hero-buttons">
-                            <a href="#reservation" class="btn1"><button>Reserve A Table</button></a>
-
-                            <a href="menu.html" class="btn2"><button>Explore Our Menu</button></a>
-                        </div>
-
-                    </div>
-
+                <div class="logo">
+                    <img src="pictures/zareh mahal logo.png" alt="ZAREH-MAHAL LOGO">
                 </div>
 
+                <ul class="nav-links">
+                    <li><a href="#home" class="active">HOME</a></li>
+                    <li><a href="#about" class="active">ABOUT</a></li>
+                    <li><a href="menu.html" class="active">MENU</a></li>
+                    <li><a href="#chef" class="active">CHEF</a></li>
+                    <li><a href="#gallery" class="active">GALLERY</a></li>
+                    <li><a href="#reservation" class="active">RESERVATION</a></li>
+                    <li><a href="#contact" class="active">CONTACT</a></li>
+                </ul>
 
-                <div class="hero-image">
+                <a href="#reservation" class="reserve-btn">RESERVE A TABLE</a>
 
-                    <img src="pictures/hero image.png" alt="hero-image">
-
-                </div>
+            </nav>
         </header>
 
-        <section id="about" class="about-section">
-            
+        <!--HERO SECTION OF HOME PAGE-->
+        <section class="hero" id="home">
+            <div class="hero-overlay"></div>
+
+            <div class="hero-content">
+
+                <div class="hero-tag">
+                    ✦ &nbsp; AN EXTRAORDINARY &nbsp; ✦
+                </div>
+
+                <div class="hero-small">
+                    ROYAL DINNIG EXPERIENCE
+                </div>
+
+                <h1>
+                    A ROYAL
+                    <br>
+                    <span>FEAST AWAITS</span>
+                </h1>
+
+                <div class="gold-line">
+                    ───── ✦ ─────
+                </div>
+
+                <p>
+                    At Zareh Mahal, every dish is crafted with royal
+                    recipes, aromatic spices, and timeless traditions
+                    to create an unforgettable dining experience.
+                </p>
+
+                <div class="hero-btns">
+
+                    <a href="#reservation" class="gold-btn">
+                        RESERVE A TABLE
+                        <span>→</span>
+                    </a>
+
+                    <a href="menu.html" class="outline-btn">
+                        EXPLORE OUR MENU
+                        <span>→</span>
+                    </a>
+
+                </div>
+
+            </div>
         </section>
+
+        <!--Signature dishes-->
+        <section class="signature" id="chef">
+
+            <div class="section-heading">
+
+                <div class="section-top">
+                    ───── ✦ &nbsp; CHEF'S ROYAL SELECTION &nbsp; ✦ ─────
+                </div>
+
+                <h2>
+                    ROYAL SIGNATURE DISHES
+                </h2>
+
+            </div>
+
+            <div class="dish-container">
+                <!--card1-->
+
+                <div class="dish-card">
+
+                    <div class="special">
+                        👑 &nbsp; CHEF'S SPECIAL
+                    </div>
+
+                    <img src="pictures/Zareh Shahi Biryani.jpg" alt="Zareh Shahi Biryani">
+
+                    <h3>ZAREH SHAHI BIRIYANI</h3>
+
+                    <p>
+                        Fragrant basmati rice cooked with tender
+                        mutton, saffron & royal spices. 
+                    </p>
+
+                    <div class="dish-bottom">
+
+                        <span>
+                            ₹899
+                        </span>
+
+                        <button>
+                            +
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!--card2-->
+
+                <div class="dish-card">
+
+                    <div class="special">
+                        👑 &nbsp; CHEF'S SPECIAL
+                    </div>
+
+                    <img src="pictures/Murgh Musallam.jpg" alt="Murgh Musallam">
+
+                    <h3>MURGH MUSALLAM</h3>
+
+                    <p>
+                        A royal delicacy of spring chicken stuffed
+                    with aromatic royal spices.
+                    </p>
+
+                    <div class="dish-bottom">
+
+                        <span>
+                            ₹799
+                        </span>
+
+                        <button>
+                            +
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <!--card3-->
+
+                <div class="dish-card">
+
+                    <div class="special">
+                        👑 &nbsp; CHEF'S SPECIAL
+                    </div>
+
+                    <img src="pictures/Galouti Kebab.jpg" alt="Galouti Kebab">
+
+                    <h3>NAWABI GALOUTI KEBAB</h3>
+
+                    <p>
+                        Juicy, melt-in-mouth kebabs made with
+                        authentic Awadhi spices. 
+                    </p>
+
+                    <div class="dish-bottom">
+
+                        <span>
+                            ₹599
+                        </span>
+
+                        <button>
+                            +
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <!--card4-->
+
+                <div class="dish-card">
+
+                    <div class="special">
+                        👑 &nbsp; CHEF'S SPECIAL
+                    </div>
+
+                    <img src="pictures/Shahi Tukda.jpg" alt="Shahi Tukda">
+
+                    <h3>SHAHI TUKDA</h3>
+
+                    <p>
+                        Crispy fried bread soaked in saffron rabri, garnished with pistachios and almonds.
+                    </p>
+
+                    <div class="dish-bottom">
+
+                        <span>
+                            ₹350
+                        </span>
+
+                        <button>
+                            +
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+    </section>
+
+    <!-------------------heritage-------------------->
+
+    <section class="heritage" id="about">
+
+        <div class="heritage-image">
+            <img src="pictures/about interior.jpg" alt="grand interior">
+        </div>
+
+        <div class="heritage-content">
+
+            <div class="small-title">
+                OUR HERITAGE
+            </div>
+
+            <h2>
+                A LEGACY OF 
+                <br>
+                <span>ROYAL FLAVOURS</span>
+            </h2>
+
+            <div class="gold-lines">
+                ───── ✦ ─────
+            </div>
+
+            <p>
+                Inspired by the grandeur of Mughal kitchens,
+                Zareh Mahal brings together authentic recipes,
+                premium ingredients, and timeless hospitality
+                for an unforgettable culinary journey.
+            </p>
+
+            <a href="#about" class="story-btn">
+                DISCOVER OUR STORY
+                <span>→</span>
+            </a>
+
+        </div>
+
+        <!-------Statictics-------->
+
+        <div class="status">
+
+            <div class="stat">
+
+                <div class="stat-icon">
+                    ♕
+                </div>
+
+                <strong>
+                    15+
+                </strong>
+
+                <span>
+                    YEARS OF
+                    <br>
+                    EXCELLENCE
+                </span>
+            </div>
+
+            <div class="stat">
+
+                <div class="stat-icon">
+                    ♨
+                </div>
+
+                <strong>
+                    80+
+                </strong>
+
+                <span>
+                    ROYAL
+                    <br>
+                    RECIPES
+                </span>
+
+            </div>
+
+            <div class="stat">
+
+                <div class="stat-icon">
+                    ♧
+                </div>
+
+                <strong>
+                    20K+
+                </strong>
+
+                <span>
+                    HAPPY
+                    <br>
+                    GUESTS
+                </span>
+
+            </div>
+
+            <div class="stat">
+
+                <div class="stat-icon">
+                    ♨
+                </div>
+
+                <strong>
+                    10+
+                </strong>
+
+                <span>
+                    Master
+                    <br>
+                    CHEFS
+                </span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-----------Reservation---------->
     </body>
 </html>

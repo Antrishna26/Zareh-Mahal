@@ -35,21 +35,50 @@ body{
 }
 .menunavbar{
     display: flex;
-    list-style: none;
     align-items: center;
-    justify-content: space-between;
-    flex: 1;
-    font-size: 20px;
-    padding-bottom: 30px;
+    justify-content: center;
+    gap: clamp(12px, 2.1vw, 30px);
 }
-.menunavbar a{
+.menunavbar a {
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.6px;
+    color: #f0efec;
+    position: relative;
+    transition: color 0.3s ease;
+    font-size: 20px;
     text-decoration: none;
-    color: #de9c0d;
-    flex: 1;
-    padding: 0 40px;
-    background: transparent;
-    backdrop-filter: blur(8px);
-    position: sticky;
+}
+
+.menunavbar a:hover,
+.menunavbar a.active {
+    color: #d4af37;
+}
+
+.menunavbar a.active::after {
+    content: "";
+    width: 22px;
+    height: 2px;
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #d4af37;
+}
+
+.nav-button {
+    border: 1px solid #d4af37;
+    padding: 12px 17px;
+    color: #d4af37;
+    font-size: 10px;
+    font-weight: 500;
+    white-space: nowrap;
+    transition: 0.3s ease;
+}
+
+.nav-button:hover {
+    color: #080808;
+    background: #d4af37;
 }
 .card-container{
     display:flex;

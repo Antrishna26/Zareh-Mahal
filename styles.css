@@ -1,0 +1,823 @@
+/* =========================
+   1. GLOBAL STYLES
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --gold: #d4af37;
+    --gold-light: #f4d786;
+    --black: #080808;
+    --card-bg: #101010;
+    --white: #f7f4ee;
+    --muted: #bcb8af;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 85px;
+}
+
+body {
+    background: var(--black);
+    color: var(--white);
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+button,
+input,
+select {
+    font: inherit;
+}
+
+
+/* =========================
+   2. NAVBAR
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.hero {
+    min-height: 100vh;
+
+    background-image:
+        linear-gradient(
+            to right,
+            rgba(0, 0, 0, 0.85) 0%,
+            rgba(0, 0, 0, 0.55) 40%,
+            rgba(0, 0, 0, 0.05) 100%
+        ),
+        url("pictures/Candlelit\ Biryani\ by\ the\ Palace\ Lake.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 15px 5%;
+    background: transparent;
+}
+
+.logo img {
+    width: 190px;
+    display: block;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #d4af37;
+}
+
+.reserve,
+.btn1,
+.btn2 {
+    padding: 13px 22px;
+    border: 1px solid #d4af37;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.reserve {
+    background: transparent;
+    color: #d4af37;
+}
+
+/* Hero content */
+.hero-container {
+    min-height: calc(100vh - 100px);
+    display: flex;
+    align-items: center;
+    padding: 40px 5%;
+}
+
+.hero-content {
+    max-width: 550px;
+    color: white;
+}
+
+.tagline {
+    color: #d4af37;
+    font-size: 14px;
+    line-height: 1.8;
+    letter-spacing: 2px;
+}
+
+.hero-content h1 {
+    margin: 22px 0;
+    font-family: Georgia, serif;
+    font-size: 44px;
+    line-height: 1.05;
+}
+
+.hero-content h1 br + * {
+    color: #d4af37;
+}
+
+.hero-content p {
+    max-width: 440px;
+    margin-bottom: 25px;
+    line-height: 1.8;
+    color: #e0e0e0;
+}
+
+.btn1 {
+    background: #d4af37;
+    color: #111;
+    margin-right: 10px;
+}
+
+.btn2 {
+    background: transparent;
+    color: #d4af37;
+}
+
+
+/* =========================
+   4. SECTION HEADINGS
+========================= */
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.section-heading > span {
+    display: block;
+    color: var(--gold);
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    margin-bottom: 6px;
+}
+
+.section-heading h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(26px, 3vw, 34px);
+    font-weight: 500;
+    color: #f7f4ee;
+}
+
+
+/* =========================
+   5. SIGNATURE DISHES
+========================= */
+
+.signature-section {
+    padding: 20px 7% 25px;
+    background:
+        radial-gradient(
+            ellipse at top,
+            #171510 0%,
+            #080808 70%
+        );
+    border-bottom: 1px solid rgba(212, 175, 55, 0.35);
+}
+
+.dish-container {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.dish-card {
+    min-width: 0;
+    background: linear-gradient(
+        180deg,
+        #17140e,
+        #080808
+    );
+    border: 1px solid rgba(212, 175, 55, 0.28);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.35s ease, border-color 0.35s ease;
+}
+
+.dish-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--gold);
+}
+
+.dish-image {
+    position: relative;
+    height: 145px;
+    overflow: hidden;
+}
+
+.dish-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.dish-card:hover .dish-image img {
+    transform: scale(1.07);
+}
+
+.special-badge {
+    position: absolute;
+    top: 10px;
+    left: 8px;
+    padding: 6px 10px;
+    background: linear-gradient(
+        135deg,
+        #f4d786,
+        #c59a35
+    );
+    color: #17120a;
+    font-size: 8px;
+    font-weight: 700;
+    border-radius: 3px;
+}
+
+.dish-info {
+    padding: 12px 12px 13px;
+}
+
+.dish-info h3 {
+    font-family: 'Cormorant Garamond', serif;
+    color: var(--gold);
+    font-size: 17px;
+    line-height: 1.3;
+    text-align: center;
+    margin-bottom: 7px;
+}
+
+.dish-info p {
+    color: #dedbd4;
+    font-size: 10px;
+    line-height: 1.7;
+    min-height: 34px;
+}
+
+.dish-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.dish-bottom strong {
+    color: var(--gold);
+    font-size: 12px;
+}
+
+.plus-button {
+    width: 23px;
+    height: 23px;
+    border: 1px solid var(--gold);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--gold);
+    font-size: 18px;
+    transition: 0.3s ease;
+}
+
+.plus-button:hover {
+    background: var(--gold);
+    color: #080808;
+}
+
+
+/* =========================
+   6. HERITAGE SECTION
+========================= */
+
+.heritage-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1.8fr;
+    min-height: 225px;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.4);
+}
+
+.heritage-image {
+    min-width: 100px;
+    background-image:
+        linear-gradient(
+            0deg,
+            rgba(0, 0, 0, 0.25),
+            rgba(0, 0, 0, 0.05)
+        ),
+        url("pictures/interior\ 2.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.heritage-content {
+    padding: 25px 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    border-right: 1px solid rgba(212, 175, 55, 0.35);
+}
+
+.eyebrow {
+    color: var(--gold);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 7px;
+}
+
+.heritage-content h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(23px, 2.5vw, 31px);
+    font-weight: 500;
+    line-height: 1.05;
+    color: #f7f4ee;
+}
+
+.heritage-content h2 span {
+    display: block;
+    color: var(--gold-light);
+}
+
+.small-divider {
+    color: var(--gold);
+    font-size: 11px;
+    margin: 10px 0;
+}
+
+.heritage-content p {
+    font-size: 9px;
+    line-height: 1.8;
+    color: #aaa69e;
+    margin-bottom: 13px;
+}
+
+.small-button {
+    display: inline-block;
+    color: var(--gold);
+    border: 1px solid #8d7026;
+    padding: 9px 12px;
+    font-size: 9px;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+.small-button:hover {
+    background: var(--gold);
+    color: #080808;
+}
+
+.stats-container {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    align-items: center;
+    padding: 22px 12px;
+}
+
+.stat {
+    text-align: center;
+    padding: 10px 6px;
+    border-right: 1px solid rgba(212, 175, 55, 0.25);
+}
+
+.stat:last-child {
+    border-right: none;
+}
+
+.stat-icon {
+    display: block;
+    color: var(--gold);
+    font-size: 32px;
+    margin-bottom: 4px;
+}
+
+.stat strong {
+    display: block;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(27px, 3vw, 38px);
+    font-weight: 500;
+    color: #fff;
+}
+
+.stat p {
+    color: #eeeae1;
+    font-size: 9px;
+    font-weight: 500;
+    line-height: 1.7;
+    margin-top: 5px;
+}
+
+
+/* =========================
+   7. RESERVATION SECTION
+========================= */
+
+.reservation-section {
+    padding-top: 20px;
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    min-height: 220px;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.35);
+}
+
+.reservation-image {
+    min-width: 200px;
+    min-height: 300px;
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.05),
+            rgba(0, 0, 0, 0.25)
+        ),
+        url("pictures/72646.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.reservation-content {
+    padding: 23px 7%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.reservation-content .section-heading {
+    margin-bottom: 17px;
+}
+
+.reservation-content .section-heading h2 {
+    font-size: clamp(22px, 2.6vw, 30px);
+}
+
+.reservation-form {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+}
+
+.reservation-form input,
+.reservation-form select {
+    width: 100%;
+    min-width: 0;
+    height: 35px;
+    padding: 0 10px;
+    background: #090909;
+    color: #eeeae1;
+    border: 1px solid #50401d;
+    border-radius: 2px;
+    font-size: 10px;
+    outline: none;
+}
+
+.reservation-form input:focus,
+.reservation-form select:focus {
+    border-color: var(--gold);
+}
+
+.reservation-form input::placeholder {
+    color: #ddd7c9;
+}
+
+.reservation-form select option {
+    background: #111;
+    color: #fff;
+}
+
+.reserve-submit {
+    width: 100%;
+    min-height: 35px;
+    border: 1px solid var(--gold);
+    background: linear-gradient(
+        135deg,
+        #f4d786,
+        #b88a2a
+    );
+    color: #111;
+    font-size: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.reserve-submit:hover {
+    filter: brightness(1.12);
+}
+
+
+/* =========================
+   8. FOOTER
+========================= */
+
+.footer {
+    display: grid;
+    grid-template-columns: 1.5fr 0.8fr 0.8fr 1fr 1.5fr;
+    gap: 25px;
+    padding: 25px 5.5%;
+    background: #060606;
+}
+
+.footer-brand {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.footer-brand .logo {
+    align-items: flex-start;
+}
+
+.footer-brand .logo-symbol {
+    font-size: 20px;
+}
+
+.footer-brand .logo-name {
+    font-size: 22px;
+}
+
+.footer-brand .logo small {
+    font-size: 7px;
+}
+
+.footer-brand > p {
+    color: #77736b;
+    font-size: 12px;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.footer-column h4 {
+    color: var(--gold);
+    font-size: 13px;
+    letter-spacing: 0.8px;
+    margin-bottom: 5px;
+}
+
+.footer-column > a,
+.footer-column > p {
+    color: #c5c0b6;
+    font-size: 12px;
+    line-height: 1.7;
+    transition: color 0.3s ease;
+}
+
+.footer-column > a:hover {
+    color: var(--gold);
+}
+
+.social-links {
+    display: flex;
+    gap: 8px;
+}
+
+.social-links a {
+    width: 27px;
+    height: 27px;
+    border: 1px solid #9d7d2a;
+    color: var(--gold);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    transition: 0.3s ease;
+}
+
+.social-links a:hover {
+    background: var(--gold);
+    color: #080808;
+}
+
+
+/* =========================
+   9. RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 1050px) {
+
+    .navbar {
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .nav-links {
+        order: 3;
+        width: 100%;
+        flex-wrap: wrap;
+        padding-top: 12px;
+        gap: 18px;
+    }
+
+    .dish-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .heritage-section {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .stats-container {
+        grid-column: 1 / -1;
+        border-top: 1px solid rgba(212, 175, 55, 0.25);
+    }
+
+    .heritage-content {
+        border-right: none;
+    }
+
+    .footer {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .navbar {
+        padding: 15px 5%;
+        gap: 15px;
+    }
+
+    .logo-name {
+        font-size: 22px;
+    }
+
+    .nav-button {
+        padding: 10px;
+        font-size: 9px;
+    }
+
+    .nav-links {
+        gap: 14px;
+    }
+
+    .nav-links a {
+        font-size: 10px;
+    }
+
+    .nav-links a.active::after {
+        bottom: -6px;
+    }
+
+    .hero {
+        min-height: 490px;
+        padding: 40px 6%;
+        background-position: 62% center;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .hero-content p {
+        max-width: 330px;
+        font-size: 11px;
+    }
+
+    .hero-tag {
+        font-size: 9px;
+        text-align: left;
+    }
+
+    .btn {
+        padding: 12px 11px;
+        font-size: 9px;
+    }
+
+    .signature-section {
+        padding: 25px 5%;
+    }
+
+    .section-heading > span {
+        font-size: 8px;
+        letter-spacing: 0.8px;
+    }
+
+    .dish-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .dish-image {
+        height: 125px;
+    }
+
+    .dish-info {
+        padding: 10px;
+    }
+
+    .dish-info h3 {
+        font-size: 15px;
+    }
+
+    .dish-info p {
+        font-size: 9px;
+    }
+
+    .special-badge {
+        font-size: 7px;
+        padding: 5px;
+    }
+
+    .heritage-section {
+        grid-template-columns: 1fr;
+    }
+
+    .heritage-image {
+        min-height: 220px;
+    }
+
+    .heritage-content {
+        padding: 25px 6%;
+    }
+
+    .stats-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        padding: 15px 5%;
+        row-gap: 15px;
+    }
+
+    .stat:nth-child(2) {
+        border-right: none;
+    }
+
+    .stat-icon {
+        font-size: 27px;
+    }
+
+    .reservation-section {
+        grid-template-columns: 1fr;
+    }
+
+    .reservation-image {
+        min-height: 200px;
+    }
+
+    .reservation-content {
+        padding: 25px 5%;
+    }
+
+    .reservation-form {
+        gap: 8px;
+    }
+
+    .reservation-form input,
+    .reservation-form select {
+        font-size: 9px;
+        padding: 0 6px;
+    }
+
+    .footer {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        padding: 25px 6%;
+        gap: 25px 18px;
+    }
+
+    .footer-brand {
+        grid-column: 1 / -1;
+    }
+
+    .contact-column {
+        grid-column: 1 / -1;
+    }
+}

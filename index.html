@@ -29,7 +29,7 @@
             <li><a href="#contact">Contact</a></li>
         </ul>
 
-        <button class="reserve">Reserve a Table</button>
+        <button class="reserve" onclick="window.location.href='#reservation'">Reserve a Table</button>
     </nav>
 
     <!-- Hero content -->
@@ -53,7 +53,7 @@
                 for an unforgettable dining experience.
             </p>
 
-            <button class="btn1">RESERVE A TABLE</button>
+            <button class="btn1" onclick="window.location.href='#reservation'">RESERVE A TABLE</button>
             <a href="menu.html">
                 <button class="btn2">EXPLORE OUR MENU</button>
             </a>
@@ -217,7 +217,7 @@
     <!-- RESERVATION SECTION -->
     <section class="reservation-section" id="reservation">
 
-        <div class="reservation-image"></div>
+        <div class="reservation-image">h\</div>
 
         <div class="reservation-content">
 
@@ -252,7 +252,7 @@
                 >
 
                 <select name="time" aria-label="Reservation time" required>
-                    <option value="">◷ Select Time</option>
+                    <option value=""disabled selected>◷ Select Time</option>
                     <option>12:00 PM</option>
                     <option>1:00 PM</option>
                     <option>2:00 PM</option>
@@ -262,7 +262,7 @@
                 </select>
 
                 <select name="guests" aria-label="Number of guests" required>
-                    <option value="">♧ Number of Guests</option>
+                    <option value=""disabled selected>♧ Number of Guests</option>
                     <option>1 Guest</option>
                     <option>2 Guests</option>
                     <option>3 Guests</option>
@@ -326,5 +326,3 @@
 
 </body>
 </html>
-
-

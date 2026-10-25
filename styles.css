@@ -57,8 +57,8 @@ select {
 }
 
 .hero {
+    z-index: 0;
     min-height: 100vh;
-
     background-image:
         linear-gradient(
             to right,
@@ -78,9 +78,8 @@ select {
     display: flex;
     align-items: center;
     justify-content: space-between;
-
     padding: 15px 5%;
-    background: transparent;
+    height: fit-content;
 }
 
 .logo img {
@@ -93,13 +92,15 @@ select {
     align-items: center;
     gap: 30px;
     list-style: none;
+;
 }
 
 .nav-links a {
     color: white;
     text-decoration: none;
     font-size: 18px;
-    transition: color 0.3s ease;
+    text-transform: capitalize;
+    transition:0.45s ease-in;
 }
 
 .nav-links a:hover {
@@ -113,11 +114,25 @@ select {
     border: 1px solid #d4af37;
     cursor: pointer;
     font-weight: bold;
+    letter-spacing: 2px;
+    
+}
+.btn1{
+    transition:0.35s ease-in;
+}
+.btn1:hover{
+    color: #d4af37; 
+    background: var(--black);
 }
 
 .reserve {
     background: transparent;
     color: #d4af37;
+    transition: 0.3s ease;
+}
+.reserve:hover{
+    background: var(--gold);
+    color: #080808; 
 }
 
 /* Hero content */
